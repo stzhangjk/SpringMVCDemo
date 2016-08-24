@@ -2,13 +2,10 @@ package controller;
 
 import DTO.RegisterDTO;
 import org.springframework.web.servlet.mvc.SimpleFormController;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
-
 /**
  * Created by STZHANGJK on 2016/8/24.
  */

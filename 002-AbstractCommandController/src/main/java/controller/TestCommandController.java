@@ -1,6 +1,6 @@
 package controller;
 
-import DTO.UserModel;
+import model.UserModel;
 import org.springframework.validation.BindException;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractCommandController;

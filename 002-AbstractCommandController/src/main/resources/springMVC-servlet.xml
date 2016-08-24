@@ -18,7 +18,7 @@
     </bean>
 
     <bean name="/hello" class="controller.TestCommandController">
-        <property name="commandClass" value="DTO.RegisterDTO"/>
+        <property name="commandClass" value="model.UserModel"/>
     </bean>
 
 
