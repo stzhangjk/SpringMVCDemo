@@ -11,6 +11,7 @@
     <modules>
         <module>001-HelloWorld</module>
         <module>002-AbstractCommandController</module>
+        <module>003-SimpleFormController</module>
     </modules>
 
     <build>

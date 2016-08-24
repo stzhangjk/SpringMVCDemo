@@ -17,9 +17,15 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <bean name="/hello" class="controller.TestCommandController">
+
+    <bean name="/register" class="controller.RegisterFormController">
+        <property name="formView" value="register" />
+        <property name="successView" value="redirect:/success"/>
+        <property name="commandName" value="user" />
         <property name="commandClass" value="DTO.RegisterDTO"/>
     </bean>
+
+    <bean name="/success" class="controller.RegisterSuccessController"/>
 
 
 </beans>
