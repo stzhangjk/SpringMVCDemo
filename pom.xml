@@ -15,6 +15,8 @@
         <module>004-CancellableFormController</module>
         <module>005-AbstractWizardFormController</module>
         <module>006-ParameterizableViewController</module>
+        <module>007-HandlerInterceptor</module>
+        <module>008-Controller-Anno</module>
     </modules>
 
     <build>

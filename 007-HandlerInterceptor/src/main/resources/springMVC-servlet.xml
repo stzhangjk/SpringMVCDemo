@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- HandlerMapping -->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+        <!--interceptors：指定拦截器链，拦截器的执行顺序就是此处添加拦截器的顺序；-->
+        <property name="interceptors">
+            <list>
+                <ref bean="handlerInterceptor1"/>
+                <ref bean="handlerInterceptor2"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- HandlerAdapter -->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+    <!-- ViewResolver -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean name="/test" class="controller.TestController"/>
+    <bean id="handlerInterceptor1" class="interceptor.MyInterceptor"/>
+    <bean id="handlerInterceptor2" class="interceptor.MyInterceptor2"/>
+
+</beans>
+
