@@ -3,6 +3,7 @@ package controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -51,5 +52,28 @@ public class HelloWorldController{
     public ModelAndView antURL(){
         System.out.println("=======antURL");
         return new ModelAndView("antURL");
+    }
+
+
+    /**
+     * 显示登录页面
+     * 制定method属性
+     * @return
+     */
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    public ModelAndView login(){
+        System.out.println("======login");
+        return new ModelAndView("login");
+    }
+
+    /**
+     * 执行登录操作
+     * 制定method属性
+     * @return
+     */
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    public ModelAndView doLogin(){
+        System.out.println("======doLogin");
+        return new ModelAndView("login_success");
     }
 }
