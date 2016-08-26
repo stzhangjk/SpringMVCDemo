@@ -18,6 +18,7 @@
         <module>007-HandlerInterceptor</module>
         <module>008-Controller-Anno</module>
         <module>009-RequestMapping</module>
+        <module>010-DataBinding</module>
     </modules>
 
     <build>
