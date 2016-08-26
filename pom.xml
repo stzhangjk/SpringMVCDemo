@@ -17,6 +17,7 @@
         <module>006-ParameterizableViewController</module>
         <module>007-HandlerInterceptor</module>
         <module>008-Controller-Anno</module>
+        <module>009-RequestMapping</module>
     </modules>
 
     <build>
